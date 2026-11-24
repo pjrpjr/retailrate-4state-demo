@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RetailRate Filing — 4-State Statutory Warranty Rate Packet ($1,295 Flat)</title>
+  <meta name="description" content="15-second client-side DMS CSV pre-screen for franchised US dealerships in TX, CA, OH, and FL. Statutory retail warranty labor and parts filing packet for $1,295 flat — 0% commission." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top Compliance & Scope Bar -->
+  <div class="top-strip">
+    <div class="container top-strip-inner">
+      <div class="strip-badges">
+        <span class="pill pill-accent">4 Verified States Only: TX · CA · OH · FL</span>
+        <span class="pill pill-neutral">100% Client-Side Pre-Screen — Zero CSV Upload</span>
+        <span class="pill pill-neutral">Built for Reynolds · Tekion · Dealertrack</span>
+      </div>
+      <div class="strip-right">
+        <span>Dealer Self-Upload Packet · Zero DMS/OEM Passwords</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand">
+        <span class="brand-mark" aria-hidden="true">RR</span>
+        <span class="brand-text">
+          <strong>RetailRate Filing</strong>
+          <small>Statutory Warranty Rate Packets · TX / CA / OH / FL</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#workbench">15-Sec Pre-Screen</a>
+        <a href="#statutes">2026 Statutes</a>
+        <a href="#reconciliation">$0.00 Reconciliation</a>
+        <a href="#compliance">Compliance Boundaries</a>
+        <a href="#request-packet" class="btn btn-sm btn-primary">Request $1,295 Packet</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">2026 Statutory Retail Warranty Reimbursement · Non-CDK Franchised Dealerships</div>
+          <h1>
+            Raise Your OEM Warranty Labor &amp; Parts Rates.<br />
+            <span class="highlight">$1,295 Flat. 0% Commission.</span>
+          </h1>
+          <p class="hero-lead">
+            Run a 15-second local DMS CSV pre-screen in your browser to see if your service department qualifies for <strong>$50,000+ in annual warranty gross profit uplift</strong> under verified 2026 state statutes—without paying $4,500–$9,000 per submission, 15%–30% contingency splits, or $499–$799/mo software locks.
+          </p>
+          <div class="hero-actions">
+            <a href="#workbench" class="btn btn-primary btn-lg">Run 15-Second CSV Pre-Screen</a>
+            <button type="button" class="btn btn-secondary btn-lg" id="hero-demo-btn">Load Sample DMS Export</button>
+          </div>
+          <ul class="hero-trust-list">
+            <li><strong>Zero RO alteration:</strong> Every sequential RO retained intact; exclusions tagged by statute subsection.</li>
+            <li><strong>Zero server upload:</strong> Pre-screen runs 100% locally in JavaScript—your RO CSV never leaves your PC.</li>
+            <li><strong>Zero UPL / zero passwords:</strong> You receive a $0.00-reconciled PDF packet for your Service Director to self-upload to the OEM portal.</li>
+          </ul>
+        </div>
+
+        <aside class="hero-compare-card" aria-label="Fee Comparison">
+          <div class="card-header-row">
+            <h2>One-Time Flat Filing vs. Legacy Vendors</h2>
+            <span class="tag tag-green">Save 71%–90%+</span>
+          </div>
+          <div class="price-compare-list">
+            <div class="compare-item compare-featured">
+              <div>
+                <div class="compare-name">RetailRate Statutory Filing Packet</div>
+                <div class="compare-sub">Both labor &amp; parts · $0.00 PDF reconciliation · Dealer self-upload</div>
+              </div>
+              <div class="compare-price">
+                <strong>$1,295</strong>
+                <span>one-time · 0% split</span>
+              </div>
+            </div>
+
+            <div class="compare-item">
+              <div>
+                <div class="compare-name">Fixed Performance ("Margin Plus")</div>
+                <div class="compare-sub">$4,500 per department ($9,000 labor + parts)</div>
+              </div>
+              <div class="compare-price muted">
+                <strong>$4,500–$9,000</strong>
+                <span>per submission</span>
+              </div>
+            </div>
+
+            <div class="compare-item">
+              <div>
+                <div class="compare-name">Contingency Consultants (e.g., Armatus)</div>
+                <div class="compare-sub">15%–30% of first-year projected uplift</div>
+              </div>
+              <div class="compare-price muted">
+                <strong>$15,000–$30,000+</strong>
+                <span>on $100k uplift</span>
+              </div>
+            </div>
+
+            <div class="compare-item">
+              <div>
+                <div class="compare-name">Monthly Fixed Ops Subscriptions</div>
+                <div class="compare-sub">FixedOps HQ &amp; similar annual SaaS contracts</div>
+              </div>
+              <div class="compare-price muted">
+                <strong>$499–$799/mo</strong>
+                <span>$5,988–$9,588/yr</span>
+              </div>
+            </div>
+          </div>
+          <div class="compare-footnote">
+            Covers verified 2026 statutes in <strong>TX, CA, OH, and FL only</strong>. Florida strictly uses statutory compliance scrub + dual fixed monthly labor comparison (never sliding-window selection).
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Interactive 15-Second Pre-Screen Workbench -->
+    <section id="workbench" class="section workbench-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Interactive 15-Second Pre-Screen Workbench</div>
+            <h2>Verify Your Statutory Rate Uplift Locally</h2>
+          </div>
+          <div class="local-privacy-badge">
+            <span class="dot-green" aria-hidden="true"></span>
+            <span>Local Browser Engine · 0 Bytes Sent to Any Server</span>
+          </div>
+        </div>
+
+        <!-- Step 1: 4-State Selector -->
+        <div class="panel state-selector-panel" id="statutes">
+          <div class="panel-top">
+            <div>
+              <span class="step-num">STEP 1</span>
+              <h3>Select Verified Jurisdiction (TX · CA · OH · FL Only)</h3>
+            </div>
+            <span class="micro-note">We do not claim coverage outside these 4 verified 2026 statutes.</span>
+          </div>
+
+          <div class="state-tabs" role="tablist" aria-label="Verified States">
+            <button type="button" class="state-tab active" role="tab" aria-selected="true" data-state="TX">
+              <span class="state-code">TX</span>
+              <span class="state-name">Texas</span>
+              <span class="state-cite">Tex. Occ. Code § 2301.402</span>
+            </button>
+            <button type="button" class="state-tab" role="tab" aria-selected="false" data-state="CA">
+              <span class="state-code">CA</span>
+              <span class="state-name">California</span>
+              <span class="state-cite">Cal. Veh. Code § 3065.2</span>
+            </button>
+            <button type="button" class="state-tab" role="tab" aria-selected="false" data-state="OH">
+              <span class="state-code">OH</span>
+              <span class="state-name">Ohio</span>
+              <span class="state-cite">Ohio Rev. Code § 4517.52</span>
+            </button>
+            <button type="button" class="state-tab state-tab-fl" role="tab" aria-selected="false" data-state="FL">
+              <span class="state-code">FL</span>
+              <span class="state-name">Florida</span>
+              <span class="state-cite">Fla. Stat. § 320.696</span>
+              <span class="fl-mini-badge">No Sliding Window</span>
+            </button>
+          </div>
+
+          <!-- Dynamic Statute Card -->
+          <div id="statute-card" class="statute-card" aria-live="polite"></div>
+        </div>
+
+        <!-- Step 2 & 3: Data Input + Dealer Baseline -->
+        <div class="workbench-input-grid">
+          <!-- Step 2: Demo Buttons + CSV Dropzone -->
+          <div class="panel">
+            <div class="panel-top">
+              <div>
+                <span class="step-num">STEP 2</span>
+                <h3>Load Demo Dataset or Drop Local DMS CSV</h3>
+              </div>
+              <span id="dms-detected-pill" class="pill pill-neutral">No CSV loaded</span>
+            </div>
+
+            <div class="demo-buttons-grid">
+              <button type="button" class="demo-btn" data-demo="TX">
+                <strong>TX Demo · Reynolds ERA-IGNITE</strong>
+                <span>200 sequential ROs · Routine maint exclusions</span>
+              </button>
+              <button type="button" class="demo-btn" data-demo="CA">
+                <strong>CA Demo · Tekion</strong>
+                <span>200 sequential ROs · § 3065.2(c) exclusions</span>
+              </button>
+              <button type="button" class="demo-btn" data-demo="OH">
+                <strong>OH Demo · Dealertrack + Recall Parts</strong>
+                <span>200 ROs + zero-cost recall retail markup</span>
+              </button>
+              <button type="button" class="demo-btn demo-btn-fl" data-demo="FL">
+                <strong>FL Demo · 3-Mo Compliance + Dual Labor</strong>
+                <span>No sliding window · Dual fixed monthly labor</span>
+              </button>
+            </div>
+
+            <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Drop DMS CSV file or click to browse">
+              <input type="file" id="csv-file-input" accept=".csv,.txt" hidden />
+              <div class="dropzone-title">Drag &amp; drop a DMS Repair Order CSV here, or <span class="link-like">browse local file</span></div>
+              <div class="dropzone-sub">
+                Auto-detects <strong>Reynolds &amp; Reynolds (ERA-IGNITE)</strong>, <strong>Tekion</strong>, <strong>Dealertrack</strong>, and generic RO CSV headers. Flags CDK exports automatically.
+              </div>
+            </div>
+
+            <div id="cdk-warning-banner" class="alert-banner alert-amber hidden" role="alert">
+              <strong>CDK Export Detected:</strong> CDK Drive includes native warranty reimbursement modules in many dealer agreements. We still completed your statutory calculation below, but please verify whether your current CDK package already includes a filing module before purchasing an external packet.
+            </div>
+
+            <div id="csv-error-banner" class="alert-banner alert-red hidden" role="alert"></div>
+          </div>
+
+          <!-- Step 3: Editable Dealer Baseline Inputs -->
+          <div class="panel">
+            <div class="panel-top">
+              <div>
+                <span class="step-num">STEP 3</span>
+                <h3>Dealer Warranty Baseline Inputs</h3>
+              </div>
+              <button type="button" id="reset-defaults-btn" class="text-btn">Reset State Defaults</button>
+            </div>
+
+            <form id="dealer-inputs-form" class="inputs-grid" novalidate>
+              <label class="field">
+                <span>Current OEM Warranty Labor Rate ($/hr)</span>
+                <input type="number" id="input-current-labor" step="0.01" min="0" value="155.00" />
+              </label>
+
+              <label class="field">
+                <span>Current OEM Warranty Parts Markup (%)</span>
+                <input type="number" id="input-current-markup" step="0.01" min="0" value="40.00" />
+              </label>
+
+              <label class="field">
+                <span>Annual Warranty Billed Hours (hrs/yr)</span>
+                <input type="number" id="input-annual-hours" step="1" min="0" value="4500" />
+              </label>
+
+              <label class="field">
+                <span>Annual Warranty Parts Cost ($/yr)</span>
+                <input type="number" id="input-annual-parts-cost" step="100" min="0" value="420000" />
+              </label>
+
+              <!-- OH Specific Input -->
+              <label class="field field-full state-only-field hidden" id="field-oh-zero-cost">
+                <span>OH Annual Zero-Cost / Reduced-Cost Recall &amp; Warranty Parts Cost ($/yr)</span>
+                <input type="number" id="input-oh-zero-cost" step="100" min="0" value="85000" />
+                <small class="field-help">Under Ohio Rev. Code § 4517.52, zero-cost recall/warranty parts still earn your qualified retail parts markup % on OEM price-schedule cost.</small>
+              </label>
+
+              <!-- FL Specific Inputs -->
+              <label class="field state-only-field hidden" id="field-fl-gp-pct">
+                <span>FL Prior 2-Mo Avg Retail Labor GP (%)</span>
+                <input type="number" id="input-fl-gp-pct" step="0.01" min="1" max="95" value="76.50" />
+                <small class="field-help">Used for Option 2: Fla. Stat. § 320.696(4)(b)2</small>
+              </label>
+
+              <label class="field state-only-field hidden" id="field-fl-tech-wage">
+                <span>FL Prior 1-Mo Mean Tech Wage ($/hr)</span>
+                <input type="number" id="input-fl-tech-wage" step="0.01" min="0" value="46.50" />
+                <small class="field-help">Option 2 formula: wage / (1 − 2-mo GP%)</small>
+              </label>
+            </form>
+
+            <div class="input-action-row">
+              <span class="micro-note">Calculations update automatically in real time using integer-cent precision.</span>
+              <span id="runtime-pill" class="pill pill-neutral">Runtime: —</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4: Instant Results Dashboard -->
+        <div id="results-dashboard" class="results-dashboard">
+          <!-- Verdict Banner -->
+          <div id="verdict-banner" class="verdict-banner">
+            <div class="verdict-left">
+              <div class="verdict-badge-row">
+                <span id="verdict-badge" class="verdict-badge">—</span>
+                <span id="verdict-state-tag" class="pill pill-neutral">—</span>
+                <span id="verdict-dataset-tag" class="pill pill-neutral">—</span>
+              </div>
+              <h3 id="verdict-headline">Loading pre-screen results…</h3>
+              <p id="verdict-subtext" class="verdict-subtext"></p>
+            </div>
+            <div class="verdict-right">
+              <div class="verdict-metric-label">12-Month Projected Warranty GP Uplift</div>
+              <div id="verdict-total-uplift" class="verdict-metric-value">$0.00</div>
+              <div class="verdict-export-btns">
+                <button type="button" id="download-json-btn" class="btn btn-sm btn-secondary">Download JSON</button>
+                <button type="button" id="download-txt-btn" class="btn btn-sm btn-secondary">Download TXT Report</button>
+                <a href="#request-packet" class="btn btn-sm btn-primary">Request $1,295 Packet</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- KPI Cards -->
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-label">Qualified Statutory Labor Rate</div>
+              <div id="kpi-labor-rate" class="kpi-value">$0.00/hr</div>
+              <div id="kpi-labor-delta" class="kpi-meta">—</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Qualified Statutory Parts Markup</div>
+              <div id="kpi-parts-markup" class="kpi-value">0.00%</div>
+              <div id="kpi-parts-delta" class="kpi-meta">—</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">12-Mo Labor + Parts GP Uplift</div>
+              <div id="kpi-uplift-split" class="kpi-value">$0.00</div>
+              <div id="kpi-uplift-breakdown" class="kpi-meta">—</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">RO Sequence &amp; Exclusion Check</div>
+              <div id="kpi-ro-counts" class="kpi-value">0 ROs</div>
+              <div id="kpi-ro-meta" class="kpi-meta">—</div>
+            </div>
+          </div>
+
+          <!-- Statutory Window / FL Dual Algorithm Panel -->
+          <div id="method-detail-panel" class="panel"></div>
+
+          <!-- Competitor Savings Comparison Table -->
+          <div class="panel">
+            <div class="panel-top">
+              <div>
+                <h3>Fee &amp; First-Year Net Retention Comparison</h3>
+                <p class="panel-desc">Computed directly from your store's projected 12-month warranty gross profit uplift.</p>
+              </div>
+              <span id="roi-multiple-pill" class="pill pill-green">—</span>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table" id="competitor-table">
+                <thead>
+                  <tr>
+                    <th>Filing Option</th>
+                    <th>Pricing Model</th>
+                    <th class="num">Estimated Fee</th>
+                    <th class="num">Net 12-Mo Dealer Gain</th>
+                    <th class="num">Savings with RetailRate ($1,295)</th>
+                  </tr>
+                </thead>
+                <tbody id="competitor-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Red-Flagged Excluded RO Lines -->
+          <div class="panel">
+            <div class="panel-top">
+              <div>
+                <h3>Red-Flagged Statutory Exclusions (Retained in Sequence — Never Deleted)</h3>
+                <p class="panel-desc">Every excluded repair order line is tagged with its exact 2026 statutory reason and excluded from rate math while remaining intact in your sequential packet.</p>
+              </div>
+              <div class="table-controls">
+                <input type="search" id="exclusion-search" class="search-input" placeholder="Filter by RO#, op code, or statute…" aria-label="Filter excluded RO lines" />
+                <span id="exclusion-count-pill" class="pill pill-red">0 excluded</span>
+              </div>
+            </div>
+            <div class="table-wrap table-scroll">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>RO #</th>
+                    <th>Close Date</th>
+                    <th>Pay Type</th>
+                    <th>Op Code</th>
+                    <th>Description</th>
+                    <th class="num">Labor $</th>
+                    <th class="num">Parts $</th>
+                    <th>Statutory Exclusion Reason</th>
+                  </tr>
+                </thead>
+                <tbody id="exclusions-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- $0.00 PDF Reconciliation Checklist Preview -->
+    <section id="reconciliation" class="section alt-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Included in the $1,295 Filing Packet</div>
+            <h2>$0.00 Tolerance Raw RO PDF Reconciliation</h2>
+            <p class="section-lead">
+              OEM warranty reviewers reject submissions over a single $0.01 discrepancy between your DMS CSV summary and the raw PDF repair orders. Our packet reconciles every single RO penny-for-penny before your Service Director uploads it.
+            </p>
+          </div>
+          <div class="recon-toggle" role="group" aria-label="Reconciliation Preview Mode">
+            <button type="button" class="toggle-btn active" data-recon-mode="pass">Clean Packet ($0.00 PASS)</button>
+            <button type="button" class="toggle-btn" data-recon-mode="fail">Tampered $0.01 Catch (FAIL)</button>
+          </div>
+        </div>
+
+        <div class="recon-grid">
+          <div class="panel">
+            <div class="panel-top">
+              <div>
+                <h3>Packet Verification Checklist</h3>
+                <p class="panel-desc">Every line item verified via exact integer-cent arithmetic across PDF vs. DMS ledger.</p>
+              </div>
+              <span id="recon-status-pill" class="pill pill-green">PASS · $0.00 Tolerance</span>
+            </div>
+            <ul class="checklist" id="recon-checklist">
+              <li><span class="check-icon pass">✓</span> <strong>Sequential Continuity Check:</strong> All RO numbers verified in sequence; any DMS numbering gaps documented in cover memo without deleting records.</li>
+              <li><span class="check-icon pass">✓</span> <strong>5-Field Penny-for-Penny Match:</strong> Labor Sale, Billed Labor Hours, Parts Sale, Parts Cost, and RO Total checked to $0.00 between raw PDF and DMS CSV.</li>
+              <li><span class="check-icon pass">✓</span> <strong>Statutory Exclusion Schedule:</strong> Non-qualifying ROs (routine maintenance, tires, wholesale, fleet/insurance, internal, promos) tagged by exact subsection and retained in sequence.</li>
+              <li><span class="check-icon pass">✓</span> <strong>Unaltered Source PDFs + Dealer Cover Sheet:</strong> Ready for direct OEM portal upload by your Fixed Operations / Service Director (zero third-party login required).</li>
+            </ul>
+            <div id="recon-alert-box" class="alert-banner alert-red hidden"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-top">
+              <h3>Sample RO-Level Reconciliation Ledger</h3>
+              <span id="recon-summary-text" class="micro-note">5 sample ROs · 0 discrepancies</span>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>RO #</th>
+                    <th class="num">CSV Labor</th>
+                    <th class="num">PDF Labor</th>
+                    <th class="num">CSV Parts</th>
+                    <th class="num">PDF Parts</th>
+                    <th class="num">Cent Delta</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="recon-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Strict Legal & Compliance Boundaries -->
+    <section id="compliance" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Strict Scope &amp; Legal Redlines</div>
+            <h2>What We Do — and What We Never Do</h2>
+          </div>
+        </div>
+
+        <div class="compliance-grid">
+          <div class="compliance-card">
+            <h3>4 Verified 2026 Jurisdictions Only</h3>
+            <p>We strictly cover <strong>Texas (Tex. Occ. Code § 2301.402)</strong>, <strong>California (Cal. Veh. Code § 3065.2)</strong>, <strong>Ohio (Ohio Rev. Code § 4517.52)</strong>, and <strong>Florida (Fla. Stat. § 320.696)</strong>. We never extrapolate or promise unverified state filings.</p>
+          </div>
+          <div class="compliance-card compliance-card-fl">
+            <h3>Florida Strict Statutory Rule (No Sliding Window)</h3>
+            <p>Under <strong>Fla. Stat. § 320.696</strong>, we NEVER promise sliding-window optimization. Florida is strictly a <strong>Statutory Compliance Scrub + Dual Fixed Monthly Labor Comparison + 10-Day OEM Notice &amp; 50-RO Sensitivity Scrub</strong>—because the OEM selects the starting RO for the 50-repair parts sample.</p>
+          </div>
+          <div class="compliance-card">
+            <h3>Zero RO Deletion or Price Manipulation</h3>
+            <p>We never delete, edit, cherry-pick, or hide repair orders, and we never advise raising customer-pay rates mid-window. State statutes authorize OEMs to reject submissions if records are altered or prices manipulated during the sampling period.</p>
+          </div>
+          <div class="compliance-card">
+            <h3>Zero UPL / CPA / Audit Representation</h3>
+            <p>We do not request DMS or OEM portal passwords, do not provide legal counsel, CPA attestation, or administrative hearing advocacy. We deliver a $0.00-reconciled statutory PDF filing packet for your dealership's Fixed Operations / Service Director to self-upload.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking / Pre-Screen Packet Request Section -->
+    <section id="request-packet" class="section alt-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Next Step · Flat $1,295 One-Time Packet</div>
+            <h2>Request Your $1,295 Statutory Filing Packet</h2>
+            <p class="section-lead">
+              Generate a pre-filled packet request email (or download a ready-to-send intake summary) carrying your local pre-screen results. No DMS passwords required—we send you a 15-minute PDF/CSV export checklist for your exact DMS.
+            </p>
+          </div>
+        </div>
+
+        <div class="booking-grid">
+          <form id="packet-request-form" class="panel booking-form" novalidate>
+            <div class="inputs-grid">
+              <label class="field">
+                <span>Dealership Name *</span>
+                <input type="text" id="req-dealer-name" placeholder="e.g., Lone Star Toyota of Dallas" required />
+              </label>
+
+              <label class="field">
+                <span>Primary Franchise Brand *</span>
+                <input type="text" id="req-brand" placeholder="e.g., Toyota, Honda, Ford, Chevrolet" required />
+              </label>
+
+              <label class="field">
+                <span>State (4 Verified Only) *</span>
+                <select id="req-state">
+                  <option value="TX">Texas — Tex. Occ. Code § 2301.402</option>
+                  <option value="CA">California — Cal. Veh. Code § 3065.2</option>
+                  <option value="OH">Ohio — Ohio Rev. Code § 4517.52</option>
+                  <option value="FL">Florida — Fla. Stat. § 320.696 (Compliance Scrub)</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Current DMS *</span>
+                <select id="req-dms">
+                  <option value="Reynolds & Reynolds (ERA-IGNITE)">Reynolds &amp; Reynolds (ERA-IGNITE)</option>
+                  <option value="Tekion">Tekion</option>
+                  <option value="Dealertrack">Dealertrack</option>
+                  <option value="Other Non-CDK DMS">Other Non-CDK DMS</option>
+                  <option value="CDK (Verification Only)">CDK (Verification Only)</option>
+                </select>
+              </label>
+
+              <label class="field">
+                <span>Your Name &amp; Title *</span>
+                <input type="text" id="req-contact-name" placeholder="e.g., Mike Reynolds, Fixed Operations Director" required />
+              </label>
+
+              <label class="field">
+                <span>Work Email *</span>
+                <input type="email" id="req-email" placeholder="mreynolds@dealership.com" required />
+              </label>
+
+              <label class="field field-full">
+                <span>Optional Notes (Last OEM Rate Submission Date / Questions)</span>
+                <textarea id="req-notes" rows="3" placeholder="e.g., Last parts submission was 14 months ago; looking to submit both labor and parts next month."></textarea>
+              </label>
+            </div>
+
+            <div class="booking-actions">
+              <a id="mailto-btn" href="#" class="btn btn-primary btn-lg">Open Pre-Filled Request Email</a>
+              <button type="button" id="download-intake-btn" class="btn btn-secondary btn-lg">Download Intake Summary (.txt)</button>
+              <button type="button" id="copy-intake-btn" class="btn btn-ghost">Copy Email Body</button>
+            </div>
+            <div id="booking-feedback" class="micro-note" aria-live="polite"></div>
+          </form>
+
+          <aside class="panel booking-preview">
+            <div class="panel-top">
+              <h3>Attached Pre-Screen Snapshot</h3>
+              <span id="contact-email-pill" class="pill pill-neutral">Direct Intake</span>
+            </div>
+            <p class="panel-desc">Automatically synced from your live workbench results—zero raw customer PII or VINs included.</p>
+            <pre id="intake-preview-box" class="intake-preview"></pre>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>RetailRate Filing</strong> — 4-State Statutory Warranty Rate Packet Preparation (TX · CA · OH · FL Only).
+      </div>
+      <div class="footer-disclaimer">
+        Statutory calculations reference 2026 texts of Tex. Occ. Code § 2301.402, Cal. Veh. Code § 3065.2, Ohio Rev. Code § 4517.52, and Fla. Stat. § 320.696. Informational data preparation and $0.00 PDF reconciliation only—not legal advice, CPA attestation, or OEM/regulatory hearing representation. Dealership Fixed Operations / Service Director self-uploads final unaltered packet to the OEM portal.
+      </div>
+    </div>
+  </footer>
+
+  <script src="samples.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
