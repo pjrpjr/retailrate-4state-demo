@@ -1860,10 +1860,10 @@
       .map(
         (ex) => `
           <tr>
-            <td class="mono"><strong>${escHtml(ex.roNumber)}</strong></td>
-            <td class="mono">${escHtml(ex.closeDate)}</td>
-            <td class="mono">${escHtml(ex.payType)}</td>
-            <td class="mono">${escHtml(ex.opCode)}</td>
+            <td class="mono nowrap"><strong>${escHtml(ex.roNumber)}</strong></td>
+            <td class="mono nowrap">${escHtml(ex.closeDate)}</td>
+            <td class="mono nowrap">${escHtml(ex.payType)}</td>
+            <td class="mono nowrap">${escHtml(ex.opCode)}</td>
             <td>${escHtml(ex.description)}</td>
             <td class="num mono">${formatMoney(ex.laborSaleCents)}</td>
             <td class="num mono">${formatMoney(ex.partsSaleCents)}</td>

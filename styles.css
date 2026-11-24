@@ -66,6 +66,10 @@ body {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .hidden {
   display: none !important;
 }
@@ -881,11 +885,10 @@ body {
 
 /* Verdict Banner */
 .verdict-banner {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  gap: 24px;
   padding: 22px 24px;
   border-radius: var(--radius);
   background: var(--navy);
@@ -1324,7 +1327,8 @@ body {
   .recon-grid,
   .booking-grid,
   .method-grid,
-  .compliance-grid {
+  .compliance-grid,
+  .verdict-banner {
     grid-template-columns: 1fr;
   }
 
