@@ -143,7 +143,7 @@
           subsection: "Tex. Occ. Code § 2301.402(b)",
           reason: "Internal, PDI, reconditioning, or dealer/employee vehicle",
           payTypes: ["I", "INT", "INTERNAL", "PDI", "RECON", "EMP", "EMPLOYEE", "DEMO", "LOANER"],
-          opPrefixes: ["PDI", "REC0N", "RCN", "INT", "UC"],
+          opPrefixes: ["PDI", "RECON", "RCN", "INT", "UC"],
           keywords: ["pre-delivery", "pdi", "reconditioning", "used car recon", "dealer internal", "employee vehicle", "loaner"],
           customerTypes: ["INTERNAL", "DEALER", "EMPLOYEE", "DEMO", "LOANER"],
         },
@@ -262,7 +262,7 @@
           subsection: "Cal. Veh. Code § 3065.2(c)(5)",
           reason: "Vehicle reconditioning, PDI, or internal dealer work",
           payTypes: ["I", "INT", "INTERNAL", "PDI", "RECON"],
-          opPrefixes: ["PDI", "RCN", "INT", "UC"],
+          opPrefixes: ["PDI", "RECON", "RCN", "INT", "UC"],
           keywords: ["pre-delivery", "pdi", "reconditioning", "used car recon", "dealer internal"],
           customerTypes: ["INTERNAL"],
         },
@@ -355,7 +355,7 @@
           subsection: "Ohio Rev. Code § 4517.52(B)",
           reason: "Internal, PDI, reconditioning, or dealer/employee vehicle",
           payTypes: ["I", "INT", "INTERNAL", "PDI", "RECON", "EMP", "EMPLOYEE", "DEMO", "LOANER"],
-          opPrefixes: ["PDI", "RCN", "INT", "UC"],
+          opPrefixes: ["PDI", "RECON", "RCN", "INT", "UC"],
           keywords: ["pre-delivery", "pdi", "reconditioning", "used car recon", "dealer internal", "employee vehicle", "loaner"],
           customerTypes: ["INTERNAL", "DEALER", "EMPLOYEE", "DEMO", "LOANER"],
         },
@@ -434,7 +434,7 @@
           subsection: "Fla. Stat. § 320.696(3)(c) & (4)(b)",
           reason: "Internal, PDI, reconditioning, or dealer/employee vehicle",
           payTypes: ["I", "INT", "INTERNAL", "PDI", "RECON", "EMP", "EMPLOYEE", "DEMO", "LOANER"],
-          opPrefixes: ["PDI", "RCN", "INT", "UC"],
+          opPrefixes: ["PDI", "RECON", "RCN", "INT", "UC"],
           keywords: ["pre-delivery", "pdi", "reconditioning", "used car recon", "dealer internal", "employee vehicle", "loaner"],
           customerTypes: ["INTERNAL", "DEALER", "EMPLOYEE", "DEMO", "LOANER"],
         },
@@ -620,9 +620,10 @@
       for (const [k, v] of Object.entries(row)) {
         const kn = normKey(k);
         const val = String(v || "").trim().toLowerCase();
+        const cleanedVal = val.replace(/(?:^|[^a-z0-9])(?:non|no)[\s_\-]*cdk(?=$|[^a-z0-9])/g, " ");
         if (
           ["dmsvendor", "dms", "dmssystem", "sourcevendor"].includes(kn) &&
-          ["cdk", "fortellis", "cdkglobal", "cdk drive"].some((tok) => val.includes(tok))
+          ["cdk", "fortellis", "cdkglobal", "cdk drive", "elead"].some((tok) => cleanedVal.includes(tok))
         ) {
           cdkValueHit = true;
           break;
@@ -752,7 +753,11 @@
       if (rule.excludeIfAftermarket && line.isAftermarket) return rule;
       if (pt && rule.payTypes.includes(pt)) return rule;
       if (ct && rule.customerTypes.includes(ct)) return rule;
-      if (oc && rule.opPrefixes.some((p) => oc.startsWith(p))) return rule;
+      if (oc && rule.opPrefixes.some((p) => {
+        if (!oc.startsWith(p)) return false;
+        if (rule.category === "warranty_recall" && p === "REC" && oc.startsWith("RECON")) return false;
+        return true;
+      })) return rule;
       if (desc) {
         for (const kw of rule.keywords) {
           const re = new RegExp(`\\b${escapeRegex(kw)}\\b`, "i");
@@ -1148,12 +1153,19 @@
 
         const m100 = c100ByStart.get(i) || null;
         const full90Available = endDay <= maxDay;
+        const isDayStart = i === 0 || lookbackRos[i - 1].dayNum !== startDay;
 
         if (m100 && full90Available) {
-          mandated.push(m100.totalRos <= m90.totalRos ? { win: m100, counterpart: m90 } : { win: m90, counterpart: m100 });
+          if (m100.totalRos <= m90.totalRos) {
+            mandated.push({ win: m100, counterpart: m90 });
+          } else if (m90.qualifiedRos < 100 && isDayStart) {
+            mandated.push({ win: m90, counterpart: m100 });
+          } else {
+            mandated.push({ win: m100, counterpart: m90 });
+          }
         } else if (m100 && !full90Available) {
           if (m100.totalRos <= m90.totalRos) mandated.push({ win: m100, counterpart: m90 });
-        } else if (full90Available) {
+        } else if (full90Available && m90.qualifiedRos < 100 && isDayStart) {
           mandated.push({ win: m90, counterpart: null });
         }
       }
@@ -2078,7 +2090,7 @@
     ];
 
     const body = bodyLines.join("\n");
-    const mailtoHref = `mailto:${encodeURIComponent(CONFIG.CONTACT_EMAIL)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoHref = `mailto:${CONFIG.CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     return { subject, body, mailtoHref };
   }
 
