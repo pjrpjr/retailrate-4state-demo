@@ -12,7 +12,7 @@
   const CONFIG = {
     FLAT_FEE_CENTS: 129500n, // $1,295.00
     THRESHOLD_UPLIFT_CENTS: 5000000n, // $50,000.00
-    CONTACT_EMAIL: "alex@rostatutecheck.com",
+    CONTACT_EMAIL: "alex@rates.far31prescan.com",
     CONTACT_EMAIL_STATUS: "Isolated Filing Intake",
     COMPANY_NAME: "RetailRate Filing",
   };
